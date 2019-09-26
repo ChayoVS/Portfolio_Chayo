@@ -269,3 +269,33 @@ input{
         color: white;
     }
 }
+
+.loadImage{
+    width: 50%;
+    height: auto;
+    -webkit-animation: turn 2.5s linear infinite;
+    -o-animation: turn 2.5s linear infinite;
+    animation: turn 2.5s linear infinite;
+}
+@keyframes turn {
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg)}
+}
+
+.loader{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOut{
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
