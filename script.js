@@ -1,7 +1,5 @@
 window.addEventListener('load', () => {
     const loader = document.querySelector('.load-container');
-    loader.style.visibility = 'hidden';
-    loader.style.opacity = '0';
 })
 
  // Select all links with hashes
