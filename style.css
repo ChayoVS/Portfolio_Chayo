@@ -100,24 +100,20 @@ nav.black {
 }
 
 .primg2 {
-    background-color: red;
-    background-image: url(img/Elemento-1.png);
+	background-color: #FFB137;
 	min-height: 500px;
 }
 
 .primg3 {
-    background-color: pink;
-    background-image: url(img/Elemento-1.png);
+	background-color: #fbdfb6;
 	min-height: 500px;
 }
 .primg4 {
-    background-color: blue;
-    background-image: url(img/Elemento-1.png);
+    background-color: #EE316B;
 	min-height: 500px;
 }
 .primg5 {
-    background-color: purple;
-    background-image: url(img/Elemento-1.png);
+    background-color: #842D73;
 	min-height: 500px;
 }
 
@@ -129,8 +125,8 @@ nav.black {
 }
 
 .section-light {
-	background-color: aqua;
-	color: #666;
+	background-color:white;
+	color:black;
 }
 
 .section-dark {
@@ -182,15 +178,9 @@ footer {
 	}
 }
 
-
-
-
-
-
-
-
-
-
+.skillsImg {
+	width: 20%;
+}
 
 
 
