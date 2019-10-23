@@ -179,9 +179,14 @@ footer {
 }
 
 .skillsImg {
-	width: 20%;
+	margin: 2rem;
+	width: 30%;
 }
 
+.toolsImg {
+	margin: 2rem;
+	width: 30%;
+}
 
 
 
