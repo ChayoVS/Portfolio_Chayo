@@ -36,7 +36,7 @@ html {
     align-items: center;
 }
 .loader.hidden {
-    animation: fadeOut 1s;
+    animation: fadeOut 2s;
     animation-fill-mode: forwards;
 }
 @keyframes fadeOut{
@@ -76,7 +76,7 @@ html {
 }
 
 nav.black {
-	background-color: rgba(0, 0, 0, 0.5) !important;
+	background-color: rgba(0, 0, 0, 0.4) !important;
 	width: 100%;
 }
 
@@ -85,8 +85,7 @@ nav.black {
 .primg1,
 .primg2,
 .primg3,
-.primg4,
-.primg5 {
+.prim4  {
 	position: relative;
 	background-position: center;
 	background-size: cover;
@@ -100,21 +99,20 @@ nav.black {
 }
 
 .primg2 {
-	background-color: #FFB137;
-	min-height: 500px;
+	background-image: url(img/5.png);
+	background-color:  #842D73;
+	min-height: 600px;
 }
 
 .primg3 {
-	background-color: #fbdfb6;
-	min-height: 500px;
+	background-image: url(img/6.png);
+	background-color: #842D73;
+	min-height: 600px;
 }
+
 .primg4 {
-    background-color: #EE316B;
-	min-height: 500px;
-}
-.primg5 {
-    background-color: #842D73;
-	min-height: 500px;
+	background-color: #842D73;
+	min-height: 400px;
 }
 
 /* Section */
@@ -146,7 +144,7 @@ nav.black {
 }
 
 .border {
-	background-color: #111;
+	background-color:rgba(0, 0, 0, 0.1);
 	padding: 20px;
 }
 
@@ -154,6 +152,9 @@ nav.black {
 	background-color: transparent;
 }
 
+.descriptionAboutMe {
+	font-size: large;
+}
 footer {
 	background-color: #111;
 	color: #ffffff;
@@ -162,9 +163,8 @@ footer {
 @media (max-width: 468px) {
 	.primg1,
 	.primg2,
-    .primg3,
-    .primg4,
-    .primg5 {
+	.primg3,
+	.primg4 {
 		background-attachment: scroll;
 	}
 
@@ -178,16 +178,51 @@ footer {
 	}
 }
 
-.skillsImg {
-	margin: 2rem;
-	width: 30%;
+.softTools {
+	display: flex;
+	flex-direction: row;
 }
 
-.toolsImg {
-	margin: 2rem;
-	width: 30%;
+.tittles {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+ .skillsContainer {
+	 width: 50%;
+	 display: flex;
+	 flex-direction: column;
+	 align-content: center;
+	 align-items: center;
+ }
+
+ .toolsContainer {
+	 width: 50%;
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 align-items: center;
+ }
+ .tools1 {
+	 width: 100%;
+	 display: flex;
+	 flex-direction: column;
+ }
+ .tools2 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+ }
+.iconTech {
+	margin: 0.5rem;
+	width: 70%;
 }
 
+.iconSoft {
+	width: 60%;
+}
 
 
 

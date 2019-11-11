@@ -39,11 +39,17 @@ window.addEventListener('load', () => {
      }
  });
 
+//  $(window).on('scroll', () => {
+//      if($(window).scrollTop()){
+//          $('nav').addClass('black');
+//      }
+//      else {
+//          $('nav').removeClass('black');
+//      }
+//  })
+
  $(window).on('scroll', () => {
-     if($(window).scrollTop()){
-         $('nav').addClass('black');
-     }
-     else {
-         $('nav').removeClass('black');
-     }
- })
+        $('nav').addClass('black');
+})
+
+ScrollReveal().reveal('.appear');
