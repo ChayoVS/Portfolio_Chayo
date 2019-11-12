@@ -1,4 +1,9 @@
 /* Universal CSS */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
 body,
 html {
 	height: 100%;
@@ -88,7 +93,7 @@ nav.black {
 .primg1,
 .primg2,
 .primg3,
-.prim4 {
+.primg4 {
 	position: relative;
 	background-position: center;
 	background-size: cover;
@@ -179,6 +184,34 @@ footer {
 	.section {
 		padding: 50px 10px;
 	}
+
+	.sectionProjects {
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.cardsProjects {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card-project {
+		color: black;
+		display: grid;
+		grid-template-columns: 300px;
+		grid-template-rows: 400px 300px 80px;
+		grid-template-areas: "image" "text" "stats";
+	
+		border-radius: 18px;
+		background-color: aliceblue;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+		text-align: center;
+		margin: 1rem;
+	}
+
 }
 
 .softTools {
@@ -230,11 +263,94 @@ footer {
 
 .fab {
 	margin: 1rem;
-	color: blueviolet;
+	color: #842d73;
 }
 
 .far {
 	margin: 1rem;
-	color: blueviolet;
+	color:#842d73;
 }
 
+.fas {
+	margin: 1rem;
+	color: #842d73;
+}
+
+@media (min-width: 469px) {
+	.sectionProjects {
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.cardsProjects {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.card-project {
+		color: black;
+		display: grid;
+		grid-template-columns: 400px;
+		grid-template-rows: 400px 300px 80px;
+		grid-template-areas: "image" "text" "stats";
+	
+		border-radius: 18px;
+		background-color: aliceblue;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+		text-align: center;
+		margin: 1rem;
+	}
+}
+
+.card-image {
+	grid-area: image;
+	background: url(./img/Lol.jpg);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-size: cover;
+}
+.card-image2 {
+	grid-area: image;
+	background: url(./img/burguer.jpg);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-size: cover;
+}
+
+.card-image3 {
+	grid-area: image;
+	background: url(./img/ttt2.jpeg);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-size: cover;
+}
+
+.card-text {
+	grid-area: text;
+}
+
+.card-stats {
+	grid-area: stats;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background: #842d73;
+}
+
+.card-stats .stat {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+	color: white;
+}
+
+.linksto {
+	color: black;
+}
