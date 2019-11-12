@@ -11,41 +11,44 @@ html {
 }
 
 /* Loader */
-.loadImage{
-    width: 50%;
-    height: auto;
-    -webkit-animation: turn 2.5s linear infinite;
-    -o-animation: turn 2.5s linear infinite;
-    animation: turn 2.5s linear infinite;
+.loadImage {
+	width: 50%;
+	height: auto;
+	-webkit-animation: turn 2.5s linear infinite;
+	-o-animation: turn 2.5s linear infinite;
+	animation: turn 2.5s linear infinite;
 }
 @keyframes turn {
-    from{ transform: rotate(0deg);}
-    to{ transform: rotate(360deg)}
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
-.loader{
-    top: 0px;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 99;
-    background-color: #fbdfb6;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+.loader {
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 90;
+	background-color: #fbdfb6;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
 }
 .loader.hidden {
-    animation: fadeOut 2s;
-    animation-fill-mode: forwards;
+	animation: fadeOut 2s;
+	animation-fill-mode: forwards;
 }
-@keyframes fadeOut{
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
+@keyframes fadeOut {
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
-
 
 /* Navbar-Section */
 
@@ -85,7 +88,7 @@ nav.black {
 .primg1,
 .primg2,
 .primg3,
-.prim4  {
+.prim4 {
 	position: relative;
 	background-position: center;
 	background-size: cover;
@@ -100,18 +103,18 @@ nav.black {
 
 .primg2 {
 	background-image: url(img/5.png);
-	background-color:  #842D73;
+	background-color: #842d73;
 	min-height: 600px;
 }
 
 .primg3 {
 	background-image: url(img/6.png);
-	background-color: #842D73;
+	background-color: #842d73;
 	min-height: 600px;
 }
 
 .primg4 {
-	background-color: #842D73;
+	background-color: #842d73;
 	min-height: 400px;
 }
 
@@ -123,8 +126,8 @@ nav.black {
 }
 
 .section-light {
-	background-color:white;
-	color:black;
+	background-color: white;
+	color: black;
 }
 
 .section-dark {
@@ -144,7 +147,7 @@ nav.black {
 }
 
 .border {
-	background-color:rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.1);
 	padding: 20px;
 }
 
@@ -190,31 +193,32 @@ footer {
 	align-content: center;
 	align-items: center;
 }
- .skillsContainer {
-	 width: 50%;
-	 display: flex;
-	 flex-direction: column;
-	 align-content: center;
-	 align-items: center;
- }
+.skillsContainer {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
 
- .toolsContainer {
-	 width: 50%;
-	 display: flex;
-	 flex-direction: row;
-	 align-items: center;
-	 align-items: center;
- }
- .tools1 {
-	 width: 100%;
-	 display: flex;
-	 flex-direction: column;
- }
- .tools2 {
+.toolsContainer {
+	margin: 2rem;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-items: center;
+}
+.tools1 {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
- }
+}
+.tools2 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
 .iconTech {
 	margin: 0.5rem;
 	width: 70%;
@@ -224,32 +228,119 @@ footer {
 	width: 60%;
 }
 
+/*Card*/
+
+.projectSection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+}
+.card {
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: #262626;
+	overflow: hidden;
+}
+
+input,
+.toggle {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	bottom: 20px;
+	right: 20px;
+	outline: none;
+	z-index: 10;
+}
+
+input {
+	opacity: 0;
+}
+
+.toggle {
+	color: black;
+	pointer-events: none;
+	border-radius: 50%;
+	background: #fff;
+	transition: 0.5s;
+	text-align: center;
+	line-height: 50px;
+	font-size: 36px;
+	box-shadow: 0 0 0 0px #842d73;
+}
+input:checked ~ .toggle {
+	box-shadow: 0 0 0 500px #842d73;
+	transform: rotate(225deg);
+}
+
+.img-fluid {
+	width: 100%;
+	height: 100%;
+}
+
+.imgBx,
+.details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.details {
+	padding: 20px;
+	box-sizing: border-box;
+	z-index: 11;
+	pointer-events: none;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+input:checked ~ .details {
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+
+.details h3 {
+	margin-bottom: 5px;
+	color: #fff;
+}
+
+.details p {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+.reference {
+	text-decoration: none;
+	color: white;
+}
+
+.btn-git {
+	border: none;
+	background: black;
+}
+
+.btn-demo {
+	border: none;
+	background:black;
+}
 
 
+.fab {
+	margin: 1rem;
+	color: blueviolet;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.far {
+	margin: 1rem;
+	color: blueviolet;
+}

@@ -51,5 +51,3 @@ window.addEventListener('load', () => {
  $(window).on('scroll', () => {
         $('nav').addClass('black');
 })
-
-ScrollReveal().reveal('.appear');
