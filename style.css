@@ -330,6 +330,11 @@ footer {
 
 .card-text {
 	grid-area: text;
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+	align-items: center;
+	justify-content: center;
 }
 
 .card-stats {
