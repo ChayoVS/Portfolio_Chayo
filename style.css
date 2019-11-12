@@ -212,21 +212,7 @@ footer {
 		margin: 1rem;
 	}
 
-}
-
-.softTools {
-	display: flex;
-	flex-direction: row;
-}
-
-.tittles {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-content: center;
-	align-items: center;
-}
-.skillsContainer {
+	.skillsContainer {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
@@ -261,6 +247,22 @@ footer {
 	width: 60%;
 } 
 
+}
+
+.softTools {
+	display: flex;
+	flex-direction: row;
+}
+
+.tittles {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+
+
 .fab {
 	margin: 1rem;
 	color: #842d73;
@@ -277,6 +279,41 @@ footer {
 }
 
 @media (min-width: 469px) {
+.skillsContainer {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
+
+.toolsContainer {
+	margin: 2rem;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-items: center;
+}
+.tools1 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.tools2 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.iconTech {
+	margin: 0.5rem;
+	width: 30%;
+}
+
+.iconSoft {
+	width: 20%;
+} 
+
 	.sectionProjects {
 		overflow: hidden;
 		display: flex;
