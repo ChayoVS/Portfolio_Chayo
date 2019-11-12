@@ -1,4 +1,9 @@
 /* Universal CSS */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
 body,
 html {
 	height: 100%;
@@ -11,41 +16,44 @@ html {
 }
 
 /* Loader */
-.loadImage{
-    width: 50%;
-    height: auto;
-    -webkit-animation: turn 2.5s linear infinite;
-    -o-animation: turn 2.5s linear infinite;
-    animation: turn 2.5s linear infinite;
+.loadImage {
+	width: 50%;
+	height: auto;
+	-webkit-animation: turn 2.5s linear infinite;
+	-o-animation: turn 2.5s linear infinite;
+	animation: turn 2.5s linear infinite;
 }
 @keyframes turn {
-    from{ transform: rotate(0deg);}
-    to{ transform: rotate(360deg)}
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
-.loader{
-    top: 0px;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 99;
-    background-color: #fbdfb6;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+.loader {
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 90;
+	background-color: #fbdfb6;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
 }
 .loader.hidden {
-    animation: fadeOut 1s;
-    animation-fill-mode: forwards;
+	animation: fadeOut 2s;
+	animation-fill-mode: forwards;
 }
-@keyframes fadeOut{
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
+@keyframes fadeOut {
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
-
 
 /* Navbar-Section */
 
@@ -76,7 +84,7 @@ html {
 }
 
 nav.black {
-	background-color: rgba(0, 0, 0, 0.5) !important;
+	background-color: rgba(0, 0, 0, 0.4) !important;
 	width: 100%;
 }
 
@@ -85,8 +93,7 @@ nav.black {
 .primg1,
 .primg2,
 .primg3,
-.primg4,
-.primg5 {
+.primg4 {
 	position: relative;
 	background-position: center;
 	background-size: cover;
@@ -100,25 +107,20 @@ nav.black {
 }
 
 .primg2 {
-    background-color: red;
-    background-image: url(img/Elemento-1.png);
-	min-height: 500px;
+	background-image: url(img/5.png);
+	background-color: #842d73;
+	min-height: 600px;
 }
 
 .primg3 {
-    background-color: pink;
-    background-image: url(img/Elemento-1.png);
-	min-height: 500px;
+	background-image: url(img/6.png);
+	background-color: #842d73;
+	min-height: 600px;
 }
+
 .primg4 {
-    background-color: blue;
-    background-image: url(img/Elemento-1.png);
-	min-height: 500px;
-}
-.primg5 {
-    background-color: purple;
-    background-image: url(img/Elemento-1.png);
-	min-height: 500px;
+	background-color: #842d73;
+	min-height: 400px;
 }
 
 /* Section */
@@ -129,8 +131,8 @@ nav.black {
 }
 
 .section-light {
-	background-color: aqua;
-	color: #666;
+	background-color: white;
+	color: black;
 }
 
 .section-dark {
@@ -150,7 +152,7 @@ nav.black {
 }
 
 .border {
-	background-color: #111;
+	background-color: rgba(0, 0, 0, 0.1);
 	padding: 20px;
 }
 
@@ -158,6 +160,9 @@ nav.black {
 	background-color: transparent;
 }
 
+.descriptionAboutMe {
+	font-size: large;
+}
 footer {
 	background-color: #111;
 	color: #ffffff;
@@ -166,9 +171,8 @@ footer {
 @media (max-width: 468px) {
 	.primg1,
 	.primg2,
-    .primg3,
-    .primg4,
-    .primg5 {
+	.primg3,
+	.primg4 {
 		background-attachment: scroll;
 	}
 
@@ -180,46 +184,178 @@ footer {
 	.section {
 		padding: 50px 10px;
 	}
+
+	.sectionProjects {
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.cardsProjects {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card-project {
+		color: black;
+		display: grid;
+		grid-template-columns: 300px;
+		grid-template-rows: 400px 300px 80px;
+		grid-template-areas: "image" "text" "stats";
+	
+		border-radius: 18px;
+		background-color: aliceblue;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+		text-align: center;
+		margin: 1rem;
+	}
+
 }
 
+.softTools {
+	display: flex;
+	flex-direction: row;
+}
 
+.tittles {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+.skillsContainer {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
 
+.toolsContainer {
+	margin: 2rem;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-items: center;
+}
+.tools1 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.tools2 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.iconTech {
+	margin: 0.5rem;
+	width: 70%;
+}
 
+.iconSoft {
+	width: 60%;
+} 
 
+.fab {
+	margin: 1rem;
+	color: #842d73;
+}
 
+.far {
+	margin: 1rem;
+	color:#842d73;
+}
 
+.fas {
+	margin: 1rem;
+	color: #842d73;
+}
 
+@media (min-width: 469px) {
+	.sectionProjects {
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.cardsProjects {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.card-project {
+		color: black;
+		display: grid;
+		grid-template-columns: 400px;
+		grid-template-rows: 400px 300px 80px;
+		grid-template-areas: "image" "text" "stats";
+	
+		border-radius: 18px;
+		background-color: aliceblue;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+		text-align: center;
+		margin: 1rem;
+	}
+}
 
+.card-image {
+	grid-area: image;
+	background: url(./img/Lol.jpg);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-size: cover;
+}
+.card-image2 {
+	grid-area: image;
+	background: url(./img/burguer.jpg);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-size: cover;
+}
 
+.card-image3 {
+	grid-area: image;
+	background: url(./img/ttt2.jpeg);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-size: cover;
+}
 
+.card-text {
+	grid-area: text;
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+	align-items: center;
+	justify-content: center;
+}
 
+.card-stats {
+	grid-area: stats;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background: #842d73;
+}
 
+.card-stats .stat {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+	color: white;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.linksto {
+	color: black;
+}
